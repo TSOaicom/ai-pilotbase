@@ -18,13 +18,13 @@ function AppRouter() {
   return (
     <Router hook={useHashLocation}>
       <Switch>
-        <Route path="/">{() => <Home />}</Route>
+        <Route path="/" base="/">{() => <Home />}</Route>
         <Route path="/products" component={Products} />
         <Route path="/product/:id">{(params) => <ProductDetail id={params.id} />}</Route>
         <Route path="/news" component={News} />
         <Route path="/base" component={BaseIntro} />
         <Route path="/contact" component={Contact} />
-        <Route path="/:section?">{(params) => <Home targetSection={params.section} />}</Route>
+        <Route path="/:section">{(params) => <Home targetSection={params.section} />}</Route>
       </Switch>
     </Router>
   );
