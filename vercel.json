@@ -1,7 +1,7 @@
 {
-  "buildCommand": "vite build",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm config set approve-builds-external true && pnpm install",
   "devCommand": "pnpm run dev"
 }
